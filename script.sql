@@ -250,3 +250,10 @@ INSERT INTO tbl_tipo_desconto (descricao)
 VALUES
       ('PERCENTUAL')
     , ('VALOR_FIXO');
+
+INSERT INTO tbl_categoria (descricao)
+VALUES
+      ('CLÁSSICO')
+    , ('ESPECIAL')
+    , ('NOVO')
+    , ('PROMOÇÃO');
