@@ -242,8 +242,8 @@ VALUES
 INSERT INTO tbl_tipo_pagamento (descricao)
 VALUES
       ('PIX')
-    , ('CARTAO_CREDITO')
-    , ('CARTAO_DEBITO')
+    , ('CARTÃO_CREDITO')
+    , ('CARTÃO_DEBITO')
     , ('BOLETO');
 
 INSERT INTO tbl_tipo_desconto (descricao)
