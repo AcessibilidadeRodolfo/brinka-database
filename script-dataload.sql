@@ -42,7 +42,7 @@ VALUES
 
 INSERT INTO tbl_usuario (nome, email, telefone, senha, eh_admin)
 VALUES
-      ('Ana Carolina Ferreira',  'ana.ferreira@email.com',    '11987654321', '$2a$12$ifhtA./vE77UqlDbMwNT/e0uQvMzH4qRPo3KnGMI3.zKsrdvXYGye', TRUE)
+      ('Mariana Marrão Ferreira Felis',  'marimarrao0115@gmail.com',    '11987654321', '$2a$12$ifhtA./vE77UqlDbMwNT/e0uQvMzH4qRPo3KnGMI3.zKsrdvXYGye', TRUE)
     , ('Bruno Henrique Costa',   'bruno.costa@email.com',     '21976543210', '$2a$12$ifhtA./vE77UqlDbMwNT/e0uQvMzH4qRPo3KnGMI3.zKsrdvXYGye', FALSE)
     , ('Camila Rodrigues Lima',  'camila.lima@email.com',     '31965432109', '$2a$12$ifhtA./vE77UqlDbMwNT/e0uQvMzH4qRPo3KnGMI3.zKsrdvXYGye', FALSE)
     , ('Diego Alves Pereira',    'diego.pereira@email.com',   '41954321098', '$2a$12$ifhtA./vE77UqlDbMwNT/e0uQvMzH4qRPo3KnGMI3.zKsrdvXYGye', FALSE)
