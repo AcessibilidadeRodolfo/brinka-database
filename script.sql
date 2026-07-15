@@ -26,6 +26,7 @@ CREATE TABLE tbl_usuario (
     , email       VARCHAR(255)    NOT NULL UNIQUE
     , telefone    VARCHAR(15)
     , senha       VARCHAR(64)     NOT NULL
+    , eh_admin    BOOLEAN         NOT NULL DEFAULT FALSE
 );
 
 CREATE TABLE tbl_endereco (
@@ -223,37 +224,3 @@ CREATE TABLE tbl_pedido_desconto (
     , CONSTRAINT uk_pedido_desconto
         UNIQUE (id_pedido, id_desconto)
 );
-
-INSERT INTO tbl_status_pedido (descricao)
-VALUES
-      ('PENDENTE')
-    , ('PAGO')
-    , ('ENVIADO')
-    , ('ENTREGUE')
-    , ('CANCELADO');
-
-INSERT INTO tbl_status_pagamento (descricao)
-VALUES
-      ('PENDENTE')
-    , ('APROVADO')
-    , ('RECUSADO')
-    , ('ESTORNADO');
-
-INSERT INTO tbl_tipo_pagamento (descricao)
-VALUES
-      ('PIX')
-    , ('CARTÃO_CREDITO')
-    , ('CARTÃO_DEBITO')
-    , ('BOLETO');
-
-INSERT INTO tbl_tipo_desconto (descricao)
-VALUES
-      ('PERCENTUAL')
-    , ('VALOR_FIXO');
-
-INSERT INTO tbl_categoria (descricao)
-VALUES
-      ('CLÁSSICO')
-    , ('ESPECIAL')
-    , ('NOVO')
-    , ('PROMOÇÃO');
