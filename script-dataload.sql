@@ -50,15 +50,15 @@ VALUES
     , ('Gustavo Oliveira Reis',  'gustavo.reis@email.com',    '61932109876', '$2a$12$ifhtA./vE77UqlDbMwNT/e0uQvMzH4qRPo3KnGMI3.zKsrdvXYGye', FALSE)
     , ('Helena Barbosa Nunes',   'helena.nunes@email.com',    '71921098765', '$2a$12$ifhtA./vE77UqlDbMwNT/e0uQvMzH4qRPo3KnGMI3.zKsrdvXYGye', FALSE);
 
-INSERT INTO tbl_endereco (id_usuario, cep, numero, complemento, cidade, estado)
+INSERT INTO tbl_endereco (id_usuario, cep, rua, numero, complemento, cidade, estado)
 VALUES
-      (1, '01310100', 1000, 'Apto 42',   'São Paulo',      'SP')
-    , (2, '20040002', 250,  NULL,        'Rio de Janeiro', 'RJ')
-    , (3, '30130010', 88,   'Casa 2',    'Belo Horizonte', 'MG')
-    , (4, '80010000', 15,   NULL,        'Curitiba',       'PR')
-    , (5, '90010150', 320,  'Bloco B',   'Porto Alegre',   'RS')
-    , (6, '70040010', 500,  NULL,        'Brasília',       'DF')
-    , (7, '40010000', 77,   'Apto 301',  'Salvador',       'BA');
+      (1, '01310100', 'Avenida Paulista',         1000, 'Apto 42',  'São Paulo',      'SP')
+    , (2, '20040002', 'Rua da Assembleia',         250, NULL,       'Rio de Janeiro', 'RJ')
+    , (3, '30130010', 'Avenida Afonso Pena',        88, 'Casa 2',   'Belo Horizonte', 'MG')
+    , (4, '80010000', 'Rua XV de Novembro',         15, NULL,       'Curitiba',       'PR')
+    , (5, '90010150', 'Avenida Borges de Medeiros',320, 'Bloco B',  'Porto Alegre',   'RS')
+    , (6, '70040010', 'SQS 308',                   500, NULL,       'Brasília',       'DF')
+    , (7, '40010000', 'Avenida Sete de Setembro',   77, 'Apto 301', 'Salvador',       'BA');
 
 INSERT INTO tbl_boneco (imagem, nome, id_categoria, descricao, preco, estoque)
 VALUES
@@ -141,3 +141,13 @@ VALUES
       (1, 1)
     , (4, 2)
     , (5, 4);
+
+INSERT INTO tbl_cartao (numero_cartao, nome_titular, data_validade, cvc, id_usuario)
+VALUES
+      ('4532123412341234', 'Mariana Marrão Ferreira Felis', '2029-08-31', '123', 1)
+    , ('5214567890123456', 'Bruno Henrique Costa',          '2028-11-30', '456', 2)
+    , ('4000123412341234', 'Camila Rodrigues Lima',         '2030-05-31', '789', 3)
+    , ('6011123412341234', 'Diego Alves Pereira',           '2027-12-31', '321', 4)
+    , ('5555444433332222', 'Fernanda Souza Martins',        '2029-03-31', '654', 5)
+    , ('4916123412341234', 'Gustavo Oliveira Reis',         '2031-01-31', '987', 6)
+    , ('3782123412345678', 'Helena Barbosa Nunes',          '2028-09-30', '159', 7);
