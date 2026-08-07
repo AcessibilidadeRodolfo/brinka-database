@@ -33,6 +33,7 @@ CREATE TABLE tbl_endereco (
       id          SERIAL          PRIMARY KEY
     , id_usuario  INTEGER         NOT NULL
     , cep         VARCHAR(8)      NOT NULL
+    , rua         VARCHAR(100)    NOT NULL
     , numero      INTEGER         NOT NULL
     , complemento VARCHAR(10)
     , cidade      VARCHAR(80)     NOT NULL
@@ -223,4 +224,21 @@ CREATE TABLE tbl_pedido_desconto (
 
     , CONSTRAINT uk_pedido_desconto
         UNIQUE (id_pedido, id_desconto)
+);
+
+CREATE TABLE tbl_cartao (
+    id              SERIAL          PRIMARY KEY
+  , nome_titular    VARCHAR(255)    NOT NULL
+  , data_validade   DATE            NOT NULL
+  , cvc             CHAR(3)         NOT NULL
+  , id_usuario      INTEGER         NOT NULL
+
+  , CONSTRAINT fk_cartao_usuario
+      FOREIGN KEY (id_usuario)
+      REFERENCES tbl_usuario(id)
+      ON DELETE CASCADE
+
+  , CONSTRAINT ck_cartao_cvc
+      CHECK (length(cvc) = 3)
+
 );
