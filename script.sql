@@ -228,15 +228,21 @@ CREATE TABLE tbl_pedido_desconto (
 
 CREATE TABLE tbl_cartao (
     id              SERIAL          PRIMARY KEY
+  , numero_cartao   CHAR(16)        NOT NULL
   , nome_titular    VARCHAR(255)    NOT NULL
   , data_validade   DATE            NOT NULL
   , cvc             CHAR(3)         NOT NULL
   , id_usuario      INTEGER         NOT NULL
 
+
   , CONSTRAINT fk_cartao_usuario
       FOREIGN KEY (id_usuario)
       REFERENCES tbl_usuario(id)
       ON DELETE CASCADE
+
+
+  , CONSTRAINT ck_cartao_numero
+      CHECK (length(numero_cartao) = 16)
 
   , CONSTRAINT ck_cartao_cvc
       CHECK (length(cvc) = 3)

@@ -142,12 +142,12 @@ VALUES
     , (4, 2)
     , (5, 4);
 
-INSERT INTO tbl_cartao (nome_titular, data_validade, cvc, id_usuario)
+INSERT INTO tbl_cartao (numero_cartao, nome_titular, data_validade, cvc, id_usuario)
 VALUES
-      ('Mariana Marrão Ferreira Felis', '2029-08-31', '123', 1)
-    , ('Bruno Henrique Costa',          '2028-11-30', '456', 2)
-    , ('Camila Rodrigues Lima',         '2030-05-31', '789', 3)
-    , ('Diego Alves Pereira',           '2027-12-31', '321', 4)
-    , ('Fernanda Souza Martins',        '2029-03-31', '654', 5)
-    , ('Gustavo Oliveira Reis',         '2031-01-31', '987', 6)
-    , ('Helena Barbosa Nunes',          '2028-09-30', '159', 7);
+      ('4532123412341234', 'Mariana Marrão Ferreira Felis', '2029-08-31', '123', 1)
+    , ('5214567890123456', 'Bruno Henrique Costa',          '2028-11-30', '456', 2)
+    , ('4000123412341234', 'Camila Rodrigues Lima',         '2030-05-31', '789', 3)
+    , ('6011123412341234', 'Diego Alves Pereira',           '2027-12-31', '321', 4)
+    , ('5555444433332222', 'Fernanda Souza Martins',        '2029-03-31', '654', 5)
+    , ('4916123412341234', 'Gustavo Oliveira Reis',         '2031-01-31', '987', 6)
+    , ('3782123412345678', 'Helena Barbosa Nunes',          '2028-09-30', '159', 7);
