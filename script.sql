@@ -30,19 +30,22 @@ CREATE TABLE tbl_usuario (
 );
 
 CREATE TABLE tbl_endereco (
-      id          SERIAL          PRIMARY KEY
-    , id_usuario  INTEGER         NOT NULL
-    , cep         VARCHAR(8)      NOT NULL
-    , rua         VARCHAR(100)    NOT NULL
-    , numero      INTEGER         NOT NULL
-    , complemento VARCHAR(10)
-    , cidade      VARCHAR(80)     NOT NULL
-    , estado      VARCHAR(20)     NOT NULL
+id          SERIAL          PRIMARY KEY
+, id_usuario  INTEGER         NOT NULL
+, cep         VARCHAR(8)      NOT NULL
+, rua         VARCHAR(100)    NOT NULL
+, numero      INTEGER         NOT NULL
+, complemento VARCHAR(10)
+, cidade      VARCHAR(80)     NOT NULL
+, estado      VARCHAR(20)     NOT NULL
 
-    , CONSTRAINT fk_endereco_usuario
-        FOREIGN KEY (id_usuario)
-        REFERENCES tbl_usuario(id)
-        ON DELETE CASCADE
+, CONSTRAINT fk_endereco_usuario
+    FOREIGN KEY (id_usuario)
+    REFERENCES tbl_usuario(id)
+    ON DELETE CASCADE
+
+, CONSTRAINT uq_endereco_usuario
+    UNIQUE (id_usuario)
 );
 
 CREATE TABLE tbl_boneco (
@@ -240,7 +243,9 @@ CREATE TABLE tbl_cartao (
       REFERENCES tbl_usuario(id)
       ON DELETE CASCADE
 
-
+    , CONSTRAINT uq_cartao_usuario
+    UNIQUE (id_usuario)
+    
   , CONSTRAINT ck_cartao_numero
       CHECK (length(numero_cartao) = 16)
 
