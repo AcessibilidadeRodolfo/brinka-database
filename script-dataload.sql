@@ -43,7 +43,6 @@ INSERT INTO tbl_tipo_pagamento (descricao)
 VALUES
     ('PIX'),
     ('CARTAO_CREDITO'),
-    ('CARTAO_DEBITO'),
     ('BOLETO');
 
 
